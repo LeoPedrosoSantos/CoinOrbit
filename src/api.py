@@ -3,9 +3,12 @@ from src.config import BASE_URL
 
 
 def buscar_moeda(nome_moeda):
-    url = f"{BASE_URL}/coins/{nome_moeda}"
+    url = f"{BASE_URL}/coins/{nome_moeda.lower()}"
 
     resposta = requests.get(url)
+
+    if resposta.status_code != 200:
+        return None
 
     dados = resposta.json()
 
