@@ -32,22 +32,17 @@ This project was developed to practice API consumption, JSON manipulation, proje
 ```text
 crypto-tracker/
 │
-├── data/
 ├── src/
 │   ├── __init__.py
 │   ├── api.py
 │   ├── config.py
 │   └── utils.py
 │
-├── tests/
 ├── .gitignore
 ├── main.py
 ├── requirements.txt
 └── README.md
 ```
-
----
-
 ## 🚀 Installation
 
 Clone the repository:
@@ -86,13 +81,14 @@ A screenshot or GIF demonstrating the application will be added after the first 
 
 ## 🎯 Future Improvements
 
-* Export data to CSV
-* Favorite cryptocurrencies
-* Search history
-* Compare multiple cryptocurrencies
-* Streamlit web interface
-* Interactive charts
-* Better error handling
+- Top 10 cryptocurrencies
+- Search by symbol (BTC, ETH...)
+- Export data to CSV
+- Search history
+- Compare multiple cryptocurrencies
+- Interactive charts
+- Streamlit web interface
+- Better error handling
 
 ---
 
