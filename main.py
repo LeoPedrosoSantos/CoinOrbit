@@ -1,4 +1,4 @@
-from src.api import buscar_moeda
+from src.api import buscar_moeda, buscar_top10
 from src.utils import formatar_preco, formatar_porcentagem, mostrar_menu
 
 def obter_moeda():
@@ -17,7 +17,22 @@ Market Cap: {formatar_preco(dados['market_cap'])}
     """)
     else: 
         print("Criptomoeda não encontrada.")
-    
+
+def mostrar_top10(dados):
+    if dados:
+        print("\nTop 10 Criptomoedas por Market Cap:")
+        print("=" * 40)
+        for posicao, moeda in enumerate(dados, start=1):
+            print(f"""
+{posicao}. Nome: {moeda['nome']}
+   Símbolo: {moeda['simbolo'].upper()}
+   Preço: {formatar_preco(moeda['preco'])}
+   Variação (24h): {formatar_porcentagem(moeda['variacao'])}
+Market Cap: {formatar_preco(moeda['market_cap'])}
+""")
+    else:
+        print("Não foi possível obter o Top 10 de criptomoedas.")
+
 while True:
     opcao = mostrar_menu().lower()
 
@@ -27,6 +42,9 @@ while True:
             mostrar_dados(dados)
 
         case "2":
+            dados = buscar_top10()
+            mostrar_top10(dados)
+        case "3":
             print("\nObrigado por usar o Crypto Tracker!")
             break
 
