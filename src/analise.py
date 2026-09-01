@@ -1,6 +1,11 @@
 import pandas as pd
 from src.utils import formatar_porcentagem, formatar_preco
 import matplotlib.pyplot as plt
+import ctypes
+
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(
+    "CoinOrbit.App"
+)
 
 plt.rcParams["toolbar"] = "None"
 
@@ -58,6 +63,12 @@ def grafico_variacao(dados):
     ax.figure.set_facecolor(cor_fundo)
     ax.set_facecolor(cor_grafico)
     ax.figure.canvas.manager.set_window_title("CoinOrbit")
+
+    gerenciador = plt.get_current_fig_manager()
+
+    gerenciador.window.iconbitmap(
+    "assets/coinorbit-icon.ico"
+)
 
     ax.tick_params(
         axis="both",
