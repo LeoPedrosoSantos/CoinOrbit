@@ -1,6 +1,6 @@
 from src.api import buscar_moeda, buscar_top10
 from src.utils import formatar_preco, formatar_porcentagem, mostrar_menu, exportar_csv
-from src.analise import analisar_top10
+from src.analise import analisar_top10, grafico_variacao
 
 def obter_moeda():
     nome_moeda = input("Digite o nome da criptomoeda: ").lower()
@@ -54,7 +54,11 @@ while True:
             analisar_top10()
 
         case "5":
-            print("\nObrigado por usar o Crypto Tracker!")
+            dados = buscar_top10()
+            grafico_variacao(dados)
+
+        case "6":
+            print("\nObrigado por usar o CoinOrbit!")
             break
 
         case _:

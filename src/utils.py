@@ -10,7 +10,7 @@ def formatar_porcentagem(valor):
 
 def mostrar_menu():
 
-    titulo = "Crypto Tracker🪙"
+    titulo = "CoinOrbit🪙"
 
     print("=" * 40)
     print(titulo.center(40))
@@ -20,7 +20,8 @@ def mostrar_menu():
     print("2 - Top 10 Criptomoedas")
     print("3 - Exportar Top 10 para CSV")
     print("4 - Analisar Top 10")
-    print("5 - Sair")
+    print("5 - Gráfico de Variação")
+    print("6 - Sair")
 
     return input("Escolha uma opção: ")
 

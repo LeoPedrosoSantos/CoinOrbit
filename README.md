@@ -1,4 +1,12 @@
-# 🚀 Crypto Tracker
+<div align="center">
+
+<img src="assets/coinorbit-logo.png" alt="Logo CoinOrbit" width="350">
+
+# CoinOrbit
+
+Dashboard para consulta, análise e visualização de dados do mercado de criptomoedas.
+
+</div>
 
 A Python application that retrieves real-time cryptocurrency information using the CoinGecko API.
 
